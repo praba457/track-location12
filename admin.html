@@ -113,23 +113,3 @@
                 map.innerHTML = `<iframe src="${lastMarker}" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`;
             } else {
                 map.innerHTML = `<p>No locations available to show on the map.</p>`;
-            }
-        });
-
-        // Copy location details to clipboard
-        function copyToClipboard(location) {
-            navigator.clipboard.writeText(location).then(() => {
-                alert('Location copied to clipboard!');
-            }).catch((error) => {
-                alert('Failed to copy location: ' + error);
-            });
-        }
-
-        // View location directly on Google Maps
-        function viewOnMap(lat, lng) {
-            const url = `https://www.google.com/maps?q=${lat},${lng}`;
-            window.open(url, '_blank');
-        }
-    </script>
-</body>
-</html>
